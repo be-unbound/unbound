@@ -2,19 +2,25 @@
 <html>
   <head>
     <title>Unbound. Coming Soon.</title>
+    
     <style type="text/css">
       body{background-color:#000000;}
       #main{width:500px;max-width:94%;margin:200px auto 400px;text-align:center;}
       .parent {
         position: relative;
         text-align:center;
+        width: 100%;
+        height: 100%;
       }
       .child {
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
-        width:400px;max-width:94%;
+        transform: translateY(-50%)  translateX(-50%);
+        width:400px;
+        max-width:94%;
         text-align:center;
+        margin: 0 auto;
+        left: 50%;
       }
       
 
@@ -116,11 +122,14 @@
       }
       
     </style>
+    
   </head>
   <body>
-    <div id="main">
+    <div class="parent">
+    <div class="child">
       <img class="animate-reveal animate-second" src="./unbound.png" style="display: block; text-align:center;margin:0 auto;width:100% !important;" /><br /><br />
       <img class="animate-reveal animate-third" src="http://gen.sendtric.com/countdown/u3ip25ibqs" style="display: block; text-align:center;margin:0 auto;width:100% !important;" />
+    </div>
     </div>
   </body>
 </html>
