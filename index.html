@@ -30,9 +30,8 @@
       
     .stage {
     }
-    .box #countdown {
+    .box {
         animation-duration: 2s;
-        /*
         animation-iteration-count: infinite;
         align-self: flex-end;
         background-color: #F44336;
@@ -40,9 +39,8 @@
         margin: 0 auto 0 auto;
         transform-origin: bottom;
         width: 200px;
-        */
     }
-    .bounce-7:hover #countdown {
+    .bounce-7 {
         animation-name: bounce-7;
         animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
     }
@@ -157,14 +155,13 @@
                   transform: translateY(0);
         }
       }
-      
     </style>
     
   </head>
   <body>
     <div class="parent">
-    <div class="child stage">
-      <div class="box bounce-7">
+    <div class="child">
+      <div class="box">
         <img id="logo" class="animate-reveal animate-second" src="./unbound.png" />
         <img id="countdown" class="animate-reveal animate-third" src="https://gen.sendtric.com/countdown/u3ip25ibqs" />
       </div>
