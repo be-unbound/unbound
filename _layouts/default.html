@@ -1,0 +1,139 @@
+<!doctype>
+<html>
+  <head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    
+    <style type="text/css">
+      html,body{margin:0;padding:0;}
+      body{background-color:#000000;background:linear-gradient(0deg, rgba(10,10,10),#000000 10%,#000000 80%,#000000 80%, rgb(43,43,43));}
+      #main{width:500px;max-width:94%;margin:200px auto 400px;text-align:center;}
+      .parent {
+        position: relative;
+        text-align:center;
+        width: 100%;
+        height: 100%;
+      }
+      .child {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%)  translateX(-50%);
+        width:600px;
+        max-width:86%;
+        text-align:center;
+        margin: 0 auto;
+        left: 50%;
+      }
+      #logo{display: block; text-align:center;margin:0 auto 60px auto;width:100%;}
+      #countdown{display: block; text-align:center;margin:0 auto;width:76%;}
+      
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+      #countdown{width:86%;}
+}
+      
+      .animate-reveal {
+        opacity: 0;
+        -webkit-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+           -moz-animation: reveal 1s ease-in 1 normal forwards;
+             -o-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+                animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+      }
+
+      .animate-first {
+        -webkit-animation-delay: 0;
+           -moz-animation-delay: 0;
+             -o-animation-delay: 0;
+                animation-delay: 0;
+      }
+
+      .animate-second {
+        -webkit-animation-delay: 500ms;
+           -moz-animation-delay: 500ms;
+             -o-animation-delay: 500ms;
+                animation-delay: 500ms;
+      }
+
+      .animate-third {
+        -webkit-animation-delay: 1s;
+           -moz-animation-delay: 1s;
+             -o-animation-delay: 1s;
+                animation-delay: 1s;
+      }
+
+      @-webkit-keyframes reveal {
+        0% {
+          opacity: 0;
+          -webkit-transform: translateY(100%);
+             -moz-transform: translateY(100%);
+               -o-transform: translateY(100%);
+                  transform: translateY(100%);
+        }
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+             -moz-transform: translateY(0);
+               -o-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+
+      @-moz-keyframes reveal {
+        0% {
+          opacity: 0;
+          -webkit-transform: translateY(100%);
+             -moz-transform: translateY(100%);
+               -o-transform: translateY(100%);
+                  transform: translateY(100%);
+        }
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+             -moz-transform: translateY(0);
+               -o-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+
+      @-o-keyframes reveal {
+        0% {
+          opacity: 0;
+          -webkit-transform: translateY(100%);
+             -moz-transform: translateY(100%);
+               -o-transform: translateY(100%);
+                  transform: translateY(100%);
+        }
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+             -moz-transform: translateY(0);
+               -o-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+
+      @keyframes reveal {
+        0% {
+          opacity: 0;
+          -webkit-transform: translateY(100%);
+             -moz-transform: translateY(100%);
+               -o-transform: translateY(100%);
+                  transform: translateY(100%);
+        }
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+             -moz-transform: translateY(0);
+               -o-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      
+    </style>
+    
+  </head>
+  <body>
+    {{ content }}
+  </body>
+</html>
