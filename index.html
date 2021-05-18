@@ -172,11 +172,36 @@
     
     console.log('loaded');
     
+    function url_redirect(url){
+    var X = setTimeout(function(){
+        window.location.replace(url);
+        return true;
+    },300);
+
+    if( window.location = url ){
+        clearTimeout(X);
+        return true;
+    } else {
+        if( window.location.href = url ){
+            clearTimeout(X);
+            return true;
+        }else{
+            clearTimeout(X);
+            window.location.replace(url);
+            return true;
+        }
+    }
+    return false;
+};
+    url_redirect('https://www.unboundsupplements.com');
+    
     // similar behavior as an HTTP redirect
     window.location.replace("https://www.unboundsupplements.com");
 
     // similar behavior as clicking on a link
     window.location.href = "https://www.unboundsupplements.com";
+    
+    
     
     
 
